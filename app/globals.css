@@ -1,0 +1,24 @@
+@config "../tailwind.config.ts";
+@import "tailwindcss";
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; }
+html { background: #06110C; }
+body { margin: 0; background: #06110C; color: #F2F0E7; font-family: var(--font-instrument), sans-serif; }
+::selection { background: #A31C1B; color: #fff; }
+button, input, select { font: inherit; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid #F2F0E7; outline-offset: 3px; }
+.texture { background-image: radial-gradient(rgba(242,240,231,.06) 1px, transparent 1px); background-size: 18px 18px; }
+.display { font-family: var(--font-bricolage), sans-serif; letter-spacing: -.045em; }
+.property-card { transition: transform .2s ease, border-color .2s ease; }
+.property-card:hover { transform: translateY(-3px); border-color: rgba(242,240,231,.28); }
+.filter-select, .filter-input, .filter-button { border: 1px solid rgba(242,240,231,.12); border-radius: 999px; background: rgba(0,0,0,.18); color: rgba(242,240,231,.8); padding: .65rem .9rem; font-size: .8rem; }
+.filter-select { appearance: auto; }
+.filter-input { border-radius: .8rem; width: 100%; outline: none; }
+.filter-input::placeholder { color: rgba(242,240,231,.35); }
+.filter-button { cursor: pointer; }
+.field-label { display:flex; justify-content:space-between; margin-bottom:.55rem; font-size:.75rem; text-transform:uppercase; letter-spacing:.15em; color:rgba(242,240,231,.72); }
+.field-label span { color:rgba(242,240,231,.35); letter-spacing:.04em; text-transform:none; }
+.form-input { width:100%; border:1px solid rgba(242,240,231,.16); border-radius:.8rem; background:#171717; color:#F2F0E7; padding:.85rem 1rem; outline:none; }
+.form-input:focus { border-color:rgba(242,240,231,.55); }
+.form-input::placeholder { color:rgba(242,240,231,.3); }
