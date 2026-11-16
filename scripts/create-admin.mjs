@@ -1,6 +1,6 @@
 import { createClient } from '@supabase/supabase-js';
 
-const required = ['NEXT_PUBLIC_SUPABASE_URL', 'SUPABASE_SECRET_KEY', 'SUPABASE_STORAGE_BUCKET'];
+const required = ['NEXT_SUPABASE_URL', 'SUPABASE_SECRET_KEY', 'SUPABASE_STORAGE_BUCKET'];
 const missing = required.filter((name) => !process.env[name]);
 
 if (missing.length) {
@@ -8,7 +8,7 @@ if (missing.length) {
   process.exit(1);
 }
 
-const supabase = createClient(process.env.NEXT_PUBLIC_SUPABASE_URL, process.env.SUPABASE_SECRET_KEY, {
+const supabase = createClient(process.env.NEXT_SUPABASE_URL, process.env.SUPABASE_SECRET_KEY, {
   auth: { autoRefreshToken: false, persistSession: false },
 });
 
